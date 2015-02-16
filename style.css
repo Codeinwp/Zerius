@@ -1,6 +1,6 @@
 /*
  Theme Name:   Zerius
- Description:  ZBlackbeard is a modern responsive Wordpress Theme. It's perfect for web agencies, digital studios, corporate, product showcase, personal and business portfolio.
+ Description:  Zerius is a modern responsive Wordpress Theme. It's perfect for web agencies, digital studios, corporate, product showcase, personal and business portfolio.
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
@@ -17,10 +17,10 @@ General
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300,300italic,200italic,200,400italic,600,600italic,700,700italic,900);
 
 .entry-content a {
-	color: #3bbbd2;
+	color: #fc5f45;
 }
 .entry-content a:visited {
-	color: #3bbbd2;
+	color: #fc5f45;
 }
 .entry-content a:hover {
 	color: #ea4747;
@@ -29,6 +29,7 @@ General
 /*--------------------------------------------------------------
 Header
 --------------------------------------------------------------*/
+
 .navbar {
 	background: rgba(31,33,36, 0.9) !important;
 }
@@ -40,9 +41,10 @@ Header
 
 	padding: 0px 15px !important;
 	color: #919495 !important;
-	border-radius: 7px !important;
+	border-radius: 4px !important;
 	margin-right: 5px !important;
-	font-family: 'Titillium Web', sans-serif;
+	/*font-family: 'Titillium Web', sans-serif;*/
+	text-transform: uppercase !important;
 	font-weight: bold;
 	font-size: 16px;
 
@@ -66,15 +68,15 @@ Header
 	color: white !important;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-	background-color: #fc5f45;
+	/*background-color: #fc5f45;*/
 	padding: 0px 15px !important;
 	color: white !important;
 }
 .nav li a.nav-active {
-	color: #3bbbd2 !important;
+	color: #fc5f45 !important;
 }
 .nav li a.nav-active:before {
-	background: #3bbbd2 !important;
+	background: #fc5f45 !important;
 }
 .header {
 	min-height: 0;
@@ -114,8 +116,8 @@ h2.white-text {
 .red-btn:hover {
     border-width: 2px;
 	border-style: solid;
-    border-color: #ffa700;
-    background: #f2573e !important;
+    border-color: #e75037 !important;
+    background: #e75037 !important;
 }
 .green-btn {
 	border-radius: 1px;
@@ -128,8 +130,9 @@ h2.white-text {
 .green-btn:hover {
     border-width: 2px;
 	border-style: solid;
-    border-color: #3bbbd2 !important;
-    background: rgba(59,187,210,1) !important;
+    border-color: rgba(100,100,100, 1) !important;
+    background: rgba(100,100,100,0.8) !important;
+
 }
 .comment-form #submit, .comment-reply-link,.submit{
 	color: #fff !important;
@@ -164,7 +167,7 @@ body{
 }
 .entry-title:before {
 	content: "";
-	background: #ea4747 !important;
+	background: #fc5f45 !important;
 }
 .entry-title a:hover{
 	color: #ea4747 !important;
@@ -177,7 +180,7 @@ body{
 }
 .widget .widget-title:before {
 	content: "";
-	background: #3bbbd2 !important;
+	background: #fc5f45 !important;
 }
 
 
@@ -189,6 +192,15 @@ body{
 	color: #919495 !important;
 
 }
+.logged-in-as a {
+
+	color: #fc5f45 !important;
+}
+
+.fn a {
+
+	color: #fc5f45 !important;
+}
 
 
 body, button, input, select, textarea {
@@ -196,7 +208,7 @@ body, button, input, select, textarea {
 }
 /* Selection colours (easy to forget) */
 ::selection {
-	background: #3bbbd2 !important;
+	background: #fc5f45 !important;
 	color: #FFF !important;
 }
 
@@ -205,7 +217,7 @@ body, button, input, select, textarea {
 }
 
 ::-moz-selection {
-	background: #3bbbd2 !important;
+	background: #fc5f45 !important;
 	color: #fff !important;
 }
 .testimonial h2 {
@@ -324,13 +336,16 @@ color: #919495 !important;
 	border-radius: 1px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #ea4747;
+	border-color: #919495;
 	position: relative;
-	background: rgba(234,71,71,0.8) !important;
+	background: #919495 !important;
+	border-radius: 5px !important;
+	font-family: 'Titillium Web', sans-serif;
 }
 .comment-form #submit:hover,
 .comment-reply-link:hover {
-	background: rgba(234,71,71,1) !important;
+	border-color: #2e3037 !important;
+	background: #2e3037 !important;
 }
 .widget_search input {
 	background: #2e3037 !important;
@@ -349,7 +364,7 @@ color: #919495 !important;
 	color: #c0cdcf !important;
 }
 .zerif-copyright {
-	color: #3bbbd2 !important;
+	color: #fc5f45 !important;
 }
 .zerif-copyright:hover {
 	opacity: 0.8;
@@ -374,7 +389,7 @@ color: #919495 !important;
 .red-text{
 
 	color: #919495 !important ;
-} 
+}
 
 
 /*--------------------------------------------------------------
@@ -415,3 +430,15 @@ portocaliu #fc5f45
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
