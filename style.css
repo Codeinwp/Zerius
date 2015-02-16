@@ -3,7 +3,7 @@
  Description:  ZBlackbeard is a modern responsive Wordpress Theme. It's perfect for web agencies, digital studios, corporate, product showcase, personal and business portfolio.
  Author:       Themeisle
  Author URI:   https://themeisle.com
- Template:     zerif-pro
+ Template:     zerif-lite
  Version:      1.0.0
  License:      GNU General Public License version 2
  License URI:  license.txt
@@ -14,6 +14,8 @@
 /*--------------------------------------------------------------
 General
 --------------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300,300italic,200italic,200,400italic,600,600italic,700,700italic,900);
+
 .entry-content a {
 	color: #3bbbd2;
 }
@@ -28,25 +30,25 @@ General
 Header
 --------------------------------------------------------------*/
 .navbar {
-	background: rgba(45,45,45, 0.9) !important;
+	background: rgba(31,33,36, 0.9) !important;
 }
 .navbar-inverse .navbar-nav ul.sub-menu {
-	background: rgba(45,45,45, 1) !important;
+	background: rgba(31,33,36, 1) !important;
 }
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .main-navigation > ul > li > a {
 
 	padding: 0px 15px !important;
-	color: rgb(182, 182, 182) !important;
+	color: #919495 !important;
 	border-radius: 7px !important;
 	margin-right: 5px !important;
-	text-transform: uppercase;
+	font-family: 'Titillium Web', sans-serif;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 16px;
 
 }
 .focus {
-	background: #fff !important;
+	background: #fff url("images/shattered.png") !important; 
 	color: #c0cdcf !important;
 }
 .focus h5 {
@@ -64,7 +66,7 @@ Header
 	color: white !important;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-	background-color: #EDAB16 ;
+	background-color: #fc5f45;
 	padding: 0px 15px !important;
 	color: white !important;
 }
@@ -88,39 +90,40 @@ Header
 Content
 --------------------------------------------------------------*/
 .dark-text {
-	color: #363636 !important;
+	color: #2e3037 !important;
 }
 h2.white-text {
-	color: #EDAB16!important;
+	color: #fff !important;
 }
 .works {
 	background: #f5f5f5 !important;
 }
 .about-us {
-	background: #363636 !important;
+	background: #2e3037 !important;
 	color: #c0cdcf !important;
 }
 .red-btn {
-	border-radius: 1px;
+	border-radius: 5px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #FAAB16 !important;
+	border-color: #fc5f45 !important;
 	position: relative;
-	background: rgba(234, 189, 71, 0.4) !important;
+	background: #fc5f45 !important;
+	font-family: 'Titillium Web', sans-serif;
 }
 .red-btn:hover {
     border-width: 2px;
 	border-style: solid;
     border-color: #ffa700;
-    background: rgba(234, 189, 71, 0.6iiii) !important;
+    background: #f2573e !important;
 }
 .green-btn {
 	border-radius: 1px;
     border-width: 2px;
 	border-style: solid;
-    border-color: #3bbbd2;
+    border-color: #98A0A2;
     position: relative;
-    background: rgba(59,187,210,0.4) !important;
+    background: rgba(145,148,149,0.8) !important;
 }
 .green-btn:hover {
     border-width: 2px;
@@ -128,17 +131,30 @@ h2.white-text {
     border-color: #3bbbd2 !important;
     background: rgba(59,187,210,1) !important;
 }
+.comment-form #submit, .comment-reply-link,.submit{
+	color: #fff !important;
+	border-radius: 1px;
+	border-width: 2px;
+	position: relative;
+	background: black !important;
+}
+
+
+
 .intro-text {	
 	padding: 15px 0;
 }
 .testimonial {
-	background: #3bbbd2 !important;
+	background: #fc5f45 !important;
 }
 .feedback-box .message {
 	color: #334346 !important;
+	font-family: 'Titillium Web', sans-serif;
 }
 .our-team {
-	background: #f5f5f5 !important;
+	/*background: #f5f5f5 !important;*/
+	background: #fff url("images/agsquare.png") !important; 
+
 }
 .textarea-box {
 	border-radius: 0;
@@ -169,19 +185,28 @@ body{
 	text-transform: capitalize !important;
 }
 
+.section-header h6{
+	color: #919495 !important;
+
+}
 
 
 body, button, input, select, textarea {
-	color: #fff !important;
+	color: #1f2124 !important;
 }
 /* Selection colours (easy to forget) */
 ::selection {
 	background: #3bbbd2 !important;
 	color: #FFF !important;
 }
+
+.skill input{
+	color: #fff !important;
+}
+
 ::-moz-selection {
 	background: #3bbbd2 !important;
-	color: #FFF !important;
+	color: #fff !important;
 }
 .testimonial h2 {
 	color: #FFF !important;
@@ -233,19 +258,33 @@ body, button, input, select, textarea {
 	color: #334346 !important;
 }
 .focus-box .service-icon {
-	border: 10px solid #DBDBDB !important;
+	border: 10px solid #cecece !important;
+}
+.focus-box p {
+	font-family: 'Titillium Web', sans-serif !important;
+	color: #919495 !important;
 }
 .service-icon a:hover{
 	color:red !important;
 
 }
+.position{
+	color: #919495 !important;
+	font-size: 14px !important;
+}
 
 .red-border-bottom:before {
-	background: #fecc17 !important;
+	background: #fc5f45 !important;
 }
 .about-us p {
-	color: #c0cdcf !important;
+	color: #919495 !important;
+	font-family: "Titillium Web",sans-serif !important;
 }
+
+.white-text {
+color: #919495 !important;
+}
+
 .about-us .big-intro {
 	color: #FFF !important;
 }
@@ -264,9 +303,20 @@ body, button, input, select, textarea {
 .comments-area input[type="email"],
 .comments-area input[type="url"],
 .comments-area textarea {
-	background: rgba(51,67,70, 0.8) !important;
+	background: #2e3037 !important;
 	color: #FFF !important;
 }
+
+.entry-content p {
+	color: #2e3037 !important;
+	font-family: 'Titillium Web', sans-serif;
+
+}
+.comments-area{
+	color: #2e3037 !important;
+
+}
+
 
 .comment-form #submit,
 .comment-reply-link {
@@ -283,7 +333,7 @@ body, button, input, select, textarea {
 	background: rgba(234,71,71,1) !important;
 }
 .widget_search input {
-	background: rgba(51,67,70, 0.8);
+	background: #2e3037 !important;
 	color: #FFF !important; 
 }
 
@@ -305,13 +355,13 @@ body, button, input, select, textarea {
 	opacity: 0.8;
 }
 .our-team .row > div .red-border-bottom:before {
-	background: #fecc17 !important;
+	background: #fc5f45 !important;
 }
 .team-member .social-icons ul li a {
 	background: none;
 }
 .team-member .social-icons ul li a:hover {
-	color: #3bbbd2 !important;
+	color: #fc5f45 !important;
 }
 .social-icons .widget li:before {
 	content: '';
@@ -323,7 +373,7 @@ body, button, input, select, textarea {
 
 .red-text{
 
-	color: #fecc17 !important ;
+	color: #919495 !important ;
 } 
 
 
@@ -331,17 +381,37 @@ body, button, input, select, textarea {
 Footer
 --------------------------------------------------------------*/
 #footer {
-	background: #363636  !important;
+	background: #2e3037 !important;
+}
+.copyright {
+  background: rgba(0,0,0,0.3) !important;
 }
 
 .social li a {
-	color: #5d5d5d !important;
+	color: #919495  !important;
 	font-size: 18px;
 }
 
 .social li a:hover {
-	color: #fecc17 !important;
+	color: #fff !important;
 	font-size: 18px;
+}
+.company-details {
+	color: #919495 !important;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
 }
 
 
+
+
+/* 
+
+
+mov deschis #919495
+mov inchis #2e3037
+mov foarte inchis #1f2124
+portocaliu #fc5f45
+
+
+*/
