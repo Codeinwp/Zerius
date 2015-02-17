@@ -1,9 +1,9 @@
 /*
  Theme Name:   Zerius
- Description:  Zerius is a modern responsive Wordpress Theme. It's perfect for web agencies, digital studios, corporate, product showcase, personal and business portfolio.
+ Description:  Zerius is a modern responsive Wordpress Theme. It's perfect for web agencies, digital studios, corporate, product showcase, personal and business portfolio. Easy to configure and to customize, this theme provides multiple features into a clean design
  Author:       Themeisle
  Author URI:   https://themeisle.com
- Template:     zerif-lite
+ Template:     zerif-pro
  Version:      1.0.0
  License:      GNU General Public License version 2
  License URI:  license.txt
@@ -36,6 +36,13 @@ Header
 .navbar-inverse .navbar-nav ul.sub-menu {
 	background: rgba(31,33,36, 1) !important;
 }
+
+#main-nav{
+
+	border-bottom: 3px solid #FC5F45 !important;
+
+}
+
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .main-navigation > ul > li > a {
 
@@ -47,6 +54,7 @@ Header
 	text-transform: uppercase !important;
 	font-weight: bold;
 	font-size: 16px;
+
 
 }
 .focus {
@@ -110,17 +118,17 @@ h2.white-text {
 	border-style: solid;
 	border-color: #fc5f45 !important;
 	position: relative;
-	background: #fc5f45 !important;
+	background: rgba(252,95,69, 0.8) !important;
 	font-family: 'Titillium Web', sans-serif;
 }
 .red-btn:hover {
     border-width: 2px;
 	border-style: solid;
-    border-color: #e75037 !important;
-    background: #e75037 !important;
+    border-color: #fc5f45 !important;
+    background: #fc5f45 !important;
 }
 .green-btn {
-	border-radius: 1px;
+	border-radius: 5px;
     border-width: 2px;
 	border-style: solid;
     border-color: #98A0A2;
@@ -208,7 +216,7 @@ body, button, input, select, textarea {
 }
 /* Selection colours (easy to forget) */
 ::selection {
-	background: #fc5f45 !important;
+	background: #2e3037 !important;
 	color: #FFF !important;
 }
 
@@ -235,10 +243,16 @@ body, button, input, select, textarea {
 	background: rgba(255,255,255, 1) !important;
 }
 .newsletter {
-	background: #ea4747 !important;
+	background: #fc5f45 !important;
+	color: white !important;
 }
+.newsletter h3 {
+	text-transform: capitalize;
+	color: white !important;
+}
+
 .separator-one {
-	background: rgba(59, 187, 210, 0.9) !important;
+	background: rgba(46, 48, 55, 0.9) !important;
 }
 .separator-one .green-btn {
 	border-radius: 1px;
@@ -284,6 +298,12 @@ body, button, input, select, textarea {
 	color: #919495 !important;
 	font-size: 14px !important;
 }
+#pricingtable{
+	background: #fff url("images/noise.png") !important; 
+	/*background-color: #2e3037 !important;*/
+}
+
+
 
 .red-border-bottom:before {
 	background: #fc5f45 !important;
@@ -294,8 +314,9 @@ body, button, input, select, textarea {
 }
 
 .white-text {
-color: #919495 !important;
+	color: #f6f6f6 !important;
 }
+
 
 .about-us .big-intro {
 	color: #FFF !important;
@@ -309,6 +330,28 @@ color: #919495 !important;
 }
 .copyright {
 	background: rgba(0,0,0,0.3) !important;
+}
+
+.package-header{
+	background: #cf4f3a !important;
+	
+}
+}
+.focus-box .service-icon .pixeden {
+	border:none !important;
+}
+.pixeden {
+	height: 100% !important;
+}
+
+/*.dark-bg {
+
+	background: #2e3037 !important;
+
+}*/
+.package a{
+
+	background:  #434343 !important;
 }
 
 .comments-area input[type="text"],
