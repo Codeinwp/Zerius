@@ -42,6 +42,44 @@ Header
 	border-bottom: 3px solid #FC5F45 !important;
 
 }
+.navbar-right-search{
+	float: right !important;
+	background: url('images/search.png') no-repeat;
+	height: 22px;
+	margin-top: 23px;
+	padding-left: 20px;
+	margin-left: 20px;
+}
+
+
+
+.header-search{
+	background: #FC5F45;
+	position: absolute;
+	width: 100%;
+	text-align:center !important;
+}
+
+
+
+.search-field{
+	width: 550px;
+	border-radius: 4px !important;
+	height: 31px !important;
+	padding-top: 1px !important;
+	border: 1px solid #cf4f3a !important;
+}
+.header-search-submit{
+	background: #2E3037 !important;
+	color: #fff !important;
+	padding: 8px 30px !important;
+	font-family: 'Titillium Web', sans-serif;
+}
+.header-search-submit:hover{
+	background: #404040 !important;
+	
+}
+
 
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .main-navigation > ul > li > a {
@@ -326,7 +364,7 @@ body, button, input, select, textarea {
 }
 #carousel-homepage-latestnews .item .latestnews-box .latestnews-title a:before {
 	content: "";
-	background: #ea4747 !important;
+	background: #fc5f45 !important;
 }
 .copyright {
 	background: rgba(0,0,0,0.3) !important;
@@ -433,7 +471,12 @@ body, button, input, select, textarea {
 
 	color: #919495 !important ;
 }
-
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    position: absolute;
+    top: 30% !important;
+    z-index: 5;
+    display: inline-block;
+}
 
 /*--------------------------------------------------------------
 Footer
@@ -476,12 +519,42 @@ portocaliu #fc5f45
 
 
 
+#wrapper {
+/*	display:none; */
+    padding-top: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
 
+#wrapper.toggled {
+    display: block;
+     -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
+}
 
-
-
+.header-search {
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.header-search.toggled {
+	height: 57px;
+	opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
 
 

@@ -39,25 +39,25 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				
+								
 				<?php
 					$zerif_logo = get_theme_mod('zerif_logo');
 					if(isset($zerif_logo) && $zerif_logo != ""):
 						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
-							echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
-						echo '</a>';
+							echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';								
+						echo '</a>';								
 					else:
-						echo '<div class="header_title">';	
-							echo '<h1 class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'</a></h1>';
-							echo '<h2 class="site-description"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'description' ).'</a></h2>';
-						echo '</div>';
+						echo '<div class="header_title">';							
+							echo '<h1 class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'</a></h1>';							
+							echo '<h2 class="site-description"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'description' ).'</a></h2>';														
+						echo '</div>';						
 					endif;
 				?>
 				
-			</div>
-			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation">
-				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list' ,'fallback_cb'     => 'zerif_wp_page_menu')); ?>
+			</div>			
+			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation">			 			 			   <a id="menu-toggle-search"> <div class="navbar-right-search"></div>			    				
+				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list' ,'fallback_cb'     => 'zerif_wp_page_menu')); ?>				
 			</nav>
-		</div>
-	</div>
+		</div>						<div id="wrapper">				<div class="header-search"> 									<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">					<label>					<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'underscore' ); ?></span>					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'underscore' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="<?php _ex( 'Search for:', 'label', 'underscore' ); ?>">					</label>						<input type="submit" class="header-search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'underscore' ); ?>">					</form>												</div>			</div>		
+	</div>	
 	<!-- / END TOP BAR -->
