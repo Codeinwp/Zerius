@@ -3,7 +3,7 @@
  Description:  Zerius is a modern responsive Wordpress Theme. It's perfect for web agencies, digital studios, corporate, product showcase, personal and business portfolio. Easy to configure and to customize, this theme provides multiple features into a clean design
  Author:       Themeisle
  Author URI:   https://themeisle.com
- Template:     zerif-pro
+ Template:     zerif-lite
  Version:      1.0.0
  License:      GNU General Public License version 2
  License URI:  license.txt
@@ -46,7 +46,7 @@ Header
 	float: right !important;
 	background: url('images/search.png') no-repeat;
 	height: 22px;
-	margin-top: 23px;
+	margin-top: 28px;
 	padding-left: 20px;
 	margin-left: 20px;
 }
@@ -211,6 +211,8 @@ h2.white-text {
 body{
 	background: #fdfdfd;
 }
+
+
 .entry-title:before {
 	content: "";
 	background: #fc5f45 !important;
@@ -252,6 +254,7 @@ body{
 body, button, input, select, textarea {
 	color: #1f2124 !important;
 }
+
 /* Selection colours (easy to forget) */
 ::selection {
 	background: #2e3037 !important;
