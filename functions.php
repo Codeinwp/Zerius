@@ -30,7 +30,8 @@ function zerius_custom_script_fix()
 		wp_enqueue_script('zerif_script_child', get_stylesheet_directory_uri() .'/js/zerif.js', array(), '201202067', true); 
 
 	}
-	
+	wp_enqueue_script('zerif_nicescroll',get_stylesheet_directory_uri().'/js/jquery.nicescroll.js',array('jquery'),'12121',true);
+    wp_enqueue_script('zerif_nicescroll-script',get_stylesheet_directory_uri().'/js/zerif-nicescroll.js',array('jquery','zerif_nicescroll'),'12121',true);	
 }
 
 add_action( 'wp_enqueue_scripts', 'zerius_custom_script_fix' );

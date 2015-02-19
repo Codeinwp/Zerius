@@ -49,6 +49,7 @@ Header
 	margin-top: 28px;
 	padding-left: 20px;
 	margin-left: 20px;
+	cursor:pointer;
 }
 
 
@@ -58,6 +59,7 @@ Header
 	position: absolute;
 	width: 100%;
 	text-align:center !important;
+
 }
 
 
