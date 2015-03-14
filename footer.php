@@ -301,11 +301,10 @@
 <?php if ( wp_is_mobile() ) : ?>
 
 	<!-- reduce heigt of the google maps on mobile -->
-	<style type="text/css">
-		.zerif_google_map {
-			height: 300px !important;
-		}
-	</style>
+	add_action( 'wp_enqueue_scripts', 'zerif_enqueue_style_mobile' );
+	function zerif_enqueue_style_mobile() {
+	    wp_enqueue_style( 'zerif-style-mobile', get_template_directory_uri() . '/css/zerif_mobile.css' );
+	}
 
 <?php endif; ?>
 
