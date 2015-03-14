@@ -87,7 +87,7 @@ endif; ?>
 
 				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
 
-				<span class="sr-only">Toggle navigation</span>
+				<span class="sr-only"><?php _e('Toggle navigation','zerif-lite'); ?></span>
 
 				<span class="icon-bar"></span>
 
@@ -151,10 +151,10 @@ endif; ?>
 				
 					<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<label>
-					<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'underscore' ); ?></span>
-					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'underscore' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="<?php _ex( 'Search for:', 'label', 'underscore' ); ?>">
+					<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'zerif-lite' ); ?></span>
+					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'zerif-lite' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="<?php _ex( 'Search for:', 'label', 'zerif-lite' ); ?>">
 					</label>
-						<input type="submit" class="header-search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'underscore' ); ?>">
+						<input type="submit" class="header-search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'zerif-lite' ); ?>">
 					</form>
 				
 				
