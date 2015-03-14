@@ -12,13 +12,6 @@ function zerius_enqueue_styles() {
 
 }
 
-function zerius_remove_style_child(){
-	remove_action('wp_print_scripts','zerif_php_style');	
-}
-
-add_action( 'wp_enqueue_scripts', 'zerius_remove_style_child', 100 );
-
-
 function zerius_custom_script_fix()
 {
 	if ( !wp_is_mobile() ){
