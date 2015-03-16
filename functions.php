@@ -30,3 +30,9 @@ function zerius_custom_script_fix()
 }
 
 add_action( 'wp_enqueue_scripts', 'zerius_custom_script_fix' );
+
+function zerius_remove_style_child(){
+	remove_action('wp_print_scripts','zerif_php_style');	
+}
+
+add_action( 'wp_enqueue_scripts', 'zerius_remove_style_child', 100 );
