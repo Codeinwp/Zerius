@@ -21,6 +21,8 @@ function zerius_custom_script_fix()
 	}else{
 
 		wp_enqueue_script('zerif_script_child', get_stylesheet_directory_uri() .'/js/zerif.js', array(), '201202067', true); 
+		/*  reduce height of the google maps on mobile */
+		wp_enqueue_style( 'zerif-style-mobile', get_template_directory_uri() . '/css/zerif_mobile.css' );
 
 	}
 	wp_enqueue_script('zerif_nicescroll',get_stylesheet_directory_uri().'/js/jquery.nicescroll.js',array('jquery'),'12121',true);
