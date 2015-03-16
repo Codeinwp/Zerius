@@ -2,22 +2,15 @@
 
 // add any new or customised functions here
 
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-function theme_enqueue_styles() {
-
-    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array('zerif_bootstrap_style') );
+add_action( 'wp_enqueue_scripts', 'zerius_enqueue_styles' );
+function zerius_enqueue_styles() {
+	
+	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array('zerif_bootstrap_style') );
 
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'zerif-child-style', get_stylesheet_uri(), array('zerif_style'), 'v1' );
+	 wp_enqueue_style( 'zerif-child-style', get_stylesheet_uri(), array('zerif_style'), 'v1' );
 
 }
-
-function remove_style_child(){
-	remove_action('wp_print_scripts','zerif_php_style');	
-}
-
-add_action( 'wp_enqueue_scripts', 'remove_style_child', 100 );
-
 
 function zerius_custom_script_fix()
 {
@@ -28,6 +21,8 @@ function zerius_custom_script_fix()
 	}else{
 
 		wp_enqueue_script('zerif_script_child', get_stylesheet_directory_uri() .'/js/zerif.js', array(), '201202067', true); 
+		/*  reduce height of the google maps on mobile */
+		wp_enqueue_style( 'zerif-style-mobile', get_template_directory_uri() . '/css/zerif_mobile.css' );
 
 	}
 	wp_enqueue_script('zerif_nicescroll',get_stylesheet_directory_uri().'/js/jquery.nicescroll.js',array('jquery'),'12121',true);
@@ -35,3 +30,9 @@ function zerius_custom_script_fix()
 }
 
 add_action( 'wp_enqueue_scripts', 'zerius_custom_script_fix' );
+
+function zerius_remove_style_child(){
+	remove_action('wp_print_scripts','zerif_php_style');	
+}
+
+add_action( 'wp_enqueue_scripts', 'zerius_remove_style_child', 100 );

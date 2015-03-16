@@ -298,17 +298,6 @@
 
 </footer> <!-- / END FOOOTER  -->
 
-<?php if ( wp_is_mobile() ) : ?>
-
-	<!-- reduce heigt of the google maps on mobile -->
-	<style type="text/css">
-		.zerif_google_map {
-			height: 300px !important;
-		}
-	</style>
-
-<?php endif; ?>
-
 <?php wp_footer(); ?>
 
 
