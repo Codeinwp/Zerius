@@ -1,10 +1,10 @@
 /*
  Theme Name:   Zerius
- Description:  Zerius is a modern responsive Wordpress Theme. It's perfect for web agencies, digital studios, corporate, product showcase, personal and business portfolio. Easy to configure and to customize, this theme provides multiple features into a clean design
+ Description:  Zerius is a clean, modern, and animated free one-page parallax WordPress theme.
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.0.1
+ Version:      1.0.2
  License:      GNU General Public License version 2
  License URI:  license.txt
  Tags:          black, gray, red, white, one-column, two-columns, right-sidebar, responsive-layout, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready
@@ -410,7 +410,7 @@ body, button, input, select, textarea {
 	background: #cf4f3a !important;
 	
 }
-}
+
 .focus-box .service-icon .pixeden {
 	border:none !important;
 }
