@@ -99,7 +99,7 @@
 
 				echo '<div class="icon-top red-text">';
 
-					if(!empty($zerif_address_icon)) echo '<img src="'.$zerif_address_icon.'"</img>';
+					if(!empty($zerif_address_icon)) echo '<img src="'.esc_url($zerif_address_icon).'"</img>';
 
 				echo '</div>';
 
@@ -122,7 +122,7 @@
 
 				echo '<div class="icon-top green-text">';
 					
-					if(!empty($zerif_email_icon)) echo '<img src="'.$zerif_email_icon.'"</img>';
+					if(!empty($zerif_email_icon)) echo '<img src="'.esc_url($zerif_email_icon).'"</img>';
 
 				echo '</div>';
 
@@ -145,7 +145,7 @@
 
 				echo '<div class="icon-top blue-text">';
 
-					if(!empty($zerif_phone_icon)) echo '<img src="'.$zerif_phone_icon.'"</img>';
+					if(!empty($zerif_phone_icon)) echo '<img src="'.esc_url($zerif_phone_icon).'"</img>';
 
 				echo '</div>';
 
@@ -173,7 +173,7 @@
 
 						if(isset($zerif_socials_facebook) && $zerif_socials_facebook != ""):
 
-							echo '<li><a href="'.$zerif_socials_facebook.'"><i class="fa fa-facebook"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_facebook).'"><i class="fa fa-facebook"></i></a></li>';
 
 						endif;
 
@@ -181,7 +181,7 @@
 
 						if(isset($zerif_socials_twitter) && $zerif_socials_twitter != ""):
 
-							echo '<li><a href="'.$zerif_socials_twitter.'"><i class="fa fa-twitter"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_twitter).'"><i class="fa fa-twitter"></i></a></li>';
 
 						endif;
 
@@ -189,7 +189,7 @@
 
 						if(isset($zerif_socials_linkedin) && $zerif_socials_linkedin != ""):
 
-							echo '<li><a href="'.$zerif_socials_linkedin.'"><i class="fa fa-linkedin"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_linkedin).'"><i class="fa fa-linkedin"></i></a></li>';
 
 						endif;
 
@@ -197,7 +197,7 @@
 
 						if(isset($zerif_socials_behance) && $zerif_socials_behance != ""):
 
-							echo '<li><a href="'.$zerif_socials_behance.'"><i class="fa fa-behance"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_behance).'"><i class="fa fa-behance"></i></a></li>';
 
 						endif;
 
@@ -205,7 +205,7 @@
 
 						if(isset($zerif_socials_dribbble) && $zerif_socials_dribbble != ""):
 
-							echo '<li><a href="'.$zerif_socials_dribbble.'"><i class="fa fa-dribbble"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_dribbble).'"><i class="fa fa-dribbble"></i></a></li>';
 
 						endif;
 						
@@ -213,7 +213,7 @@
 						
 						if(isset($zerif_socials_googleplus) && $zerif_socials_googleplus != ""):
 
-							echo '<li><a href="'.$zerif_socials_googleplus.'"><i class="fa fa-google"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_googleplus).'"><i class="fa fa-google"></i></a></li>';
 
 						endif;
 						
@@ -221,7 +221,7 @@
 						
 						if(isset($zerif_socials_pinterest) && $zerif_socials_pinterest != ""):
 
-							echo '<li><a href="'.$zerif_socials_pinterest.'"><i class="fa fa-pinterest"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_pinterest).'"><i class="fa fa-pinterest"></i></a></li>';
 							
 							
 						endif;
@@ -230,7 +230,7 @@
 						
 						if(isset($zerif_socials_tumblr) && $zerif_socials_tumblr != ""):
 
-							echo '<li><a href="'.$zerif_socials_tumblr.'"><i class="fa fa-tumblr"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_tumblr).'"><i class="fa fa-tumblr"></i></a></li>';
 
 						endif;
 						
@@ -238,14 +238,14 @@
 						
 						if(isset($zerif_socials_reddit) && $zerif_socials_reddit != ""):
 
-							echo '<li><a href="'.$zerif_socials_reddit.'"><i class="fa fa-reddit"></i></a></li>';
+							echo '<li><a href="'.esc_url($zerif_socials_reddit).'"><i class="fa fa-reddit"></i></a></li>';
 
 						endif;
 						
 						/* youtube */
 						
 						if( !empty($zerif_socials_youtube) ):
-							echo '<li><a target="_blank" href="'.$zerif_socials_youtube.'"><i class="fa fa-youtube"></i></a></li>';
+							echo '<li><a target="_blank" href="'.esc_url($zerif_socials_youtube).'"><i class="fa fa-youtube"></i></a></li>';
 						endif;
 
 						echo '</ul>';
@@ -256,9 +256,9 @@
 
 			
 
-					if(isset($zerif_copyright) && $zerif_copyright != ""):
+					if( !empty($zerif_copyright) ):
 
-						echo $zerif_copyright;
+						echo esc_attr($zerif_copyright);
 
 					endif;
 					
