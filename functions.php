@@ -5,6 +5,8 @@
 add_action( 'wp_enqueue_scripts', 'zerius_enqueue_styles' );
 function zerius_enqueue_styles() {
 	
+	wp_enqueue_style( 'zerius_font', '//fonts.googleapis.com/css?family=Titillium+Web:400,300,300italic,200italic,200,400italic,600,600italic,700,700italic,900');
+	
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array('zerif_bootstrap_style') );
 
 	// Loads our main stylesheet.
