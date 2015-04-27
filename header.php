@@ -30,9 +30,12 @@
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php
-	wp_head();
-?>
+<!--[if lt IE 9]>
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css" type="text/css">
+<![endif]-->
+
+<?php wp_head(); ?>
 
 </head>
 
@@ -40,7 +43,7 @@
 
 <?php if(isset($_POST['scrollPosition'])): ?>
 
-	<body <?php body_class(); ?> onLoad="window.scrollTo(0,<?php echo $_POST['scrollPosition']; ?>)">
+	<body <?php body_class(); ?> onLoad="window.scrollTo(0,<?php echo intval($_POST['scrollPosition']); ?>)">
 
 <?php else: ?>
 
@@ -53,23 +56,21 @@
 
 <!-- =========================
 
-   PRE LOADER       
+   PRE LOADER
 
 ============================== -->
 <?php
 	
  global $wp_customize;
 
- if(is_front_page() && !isset( $wp_customize )): 
+ if(is_front_page() && !isset( $wp_customize ) && get_option( 'show_on_front' ) != 'page' ): 
  
 	$zerif_disable_preloader = get_theme_mod('zerif_disable_preloader');
 	
 	if( isset($zerif_disable_preloader) && ($zerif_disable_preloader != 1)):
 		 
 		echo '<div class="preloader">';
-
 			echo '<div class="status">&nbsp;</div>';
-
 		echo '</div>';
 		
 	endif;	
@@ -97,8 +98,8 @@ endif; ?>
 
 				</button>
 
-				
-				
+
+
 				<?php
 
 					$zerif_logo = get_theme_mod('zerif_logo');
@@ -108,45 +109,35 @@ endif; ?>
 						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
 
 							echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
-								
 
 						echo '</a>';
-								
 
 					else:
 
-						echo '<div class="header_title">';	
-						
-							echo '<h1 class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'</a></h1>';
-							
-							echo '<h2 class="site-description"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'description' ).'</a></h2>';
-							
-							
-						echo '</div>';
-						
+						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+
+						echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
+
+						echo '</a>';
+
 					endif;
 
 				?>
 
-				
+
 
 			</div>
 
-
+			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
 			
-			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation">
-			 
-			 
-			   <a id="menu-toggle-search"> <div class="navbar-right-search"></div>
-			    
-				
-				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list' ,'fallback_cb'     => 'zerif_wp_page_menu')); ?>
-				
+				<a id="menu-toggle-search"> <div class="navbar-right-search"></div>
+
+				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
+
 			</nav>
 
 		</div>
-			
-			<div id="wrapper">
+		<div id="wrapper">
 				<div class="header-search"> 
 				
 					<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -159,10 +150,8 @@ endif; ?>
 				
 				
 				</div>
-			</div>
-		
-	</div>
-	
+		</div>
 
+	</div>
 
 	<!-- / END TOP BAR -->
