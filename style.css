@@ -38,21 +38,18 @@ Header
 }
 
 #main-nav{
-
 	border-bottom: 3px solid #FC5F45 !important;
-
 }
 .navbar-right-search{
 	float: right !important;
 	background: url('images/search.png') no-repeat;
 	height: 22px;
-	margin-top: 28px;
+	margin-top: 30px;
 	padding-left: 20px;
 	margin-left: 20px;
 	cursor:pointer;
+	margin-right: 5px;
 }
-
-
 
 .header-search{
 	background: #FC5F45;
@@ -61,8 +58,6 @@ Header
 	text-align:center !important;
 
 }
-
-
 
 .search-field{
 	width: 550px;
@@ -82,20 +77,15 @@ Header
 	
 }
 
-
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .main-navigation > ul > li > a {
-
 	padding: 0px 15px !important;
 	color: #919495 !important;
 	border-radius: 4px !important;
 	margin-right: 5px !important;
-	/*font-family: 'Titillium Web', sans-serif;*/
 	text-transform: uppercase !important;
 	font-weight: bold;
 	font-size: 16px;
-
-
 }
 .focus {
 	background: #fff url("images/shattered.png") !important; 
@@ -418,11 +408,6 @@ body, button, input, select, textarea {
 	height: 100% !important;
 }
 
-/*.dark-bg {
-
-	background: #2e3037 !important;
-
-}*/
 .package a{
 
 	background:  #434343 !important;
@@ -538,25 +523,7 @@ Footer
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 600;
 }
-
-
-
-
-/* 
-
-
-mov deschis #919495
-mov inchis #2e3037
-mov foarte inchis #1f2124
-portocaliu #fc5f45
-
-
-*/
-
-
-
 #wrapper {
-/*	display:none; */
     padding-top: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -593,4 +560,24 @@ portocaliu #fc5f45
 }
 
 
+@media screen and (max-width: 768px) {
+
+	#main-nav {
+	    overflow: visible;
+	}
+	.navbar-collapse {
+		overflow: hidden !important;
+	}
+	.navbar-inverse .navbar-nav li a {
+	    padding: 0px 15px !important;
+	    color: #919495 !important;
+	    border-radius: 4px !important;
+	    margin-right: 5px !important;
+	    text-transform: uppercase !important;
+	    font-weight: bold;
+	    font-size: 16px;
+	    line-height: 35px;
+	}
+
+}
 

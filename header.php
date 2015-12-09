@@ -84,21 +84,18 @@ endif; ?>
 
 		<div class="container">
 
-			<div class="navbar-header responsive-logo">
-
-				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-
+			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
 				<span class="sr-only"><?php _e('Toggle navigation','zerif-lite'); ?></span>
-
 				<span class="icon-bar"></span>
-
 				<span class="icon-bar"></span>
-
 				<span class="icon-bar"></span>
+			</button>
 
-				</button>
+			<a id="menu-toggle-search"> 
+				<div class="navbar-right-search"></div>
+			</a>
 
-
+			<div class="navbar-header responsive-logo">
 
 				<?php
 
@@ -124,15 +121,19 @@ endif; ?>
 
 				?>
 
-
-
 			</div>
 
 			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
-			
-				<a id="menu-toggle-search"> <div class="navbar-right-search"></div>
 
-				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
+				<?php wp_nav_menu( 
+						array(
+							'theme_location' 	=> 'primary', 
+							'container' 		=> false, 
+							'menu_class' 		=> 'nav navbar-nav navbar-right responsive-nav main-nav-list', 
+							'fallback_cb'     	=> 'zerif_wp_page_menu'
+						)
+					); 
+				?>
 
 			</nav>
 
