@@ -559,6 +559,10 @@ Footer
     transition: all 0.5s ease;
 }
 
+.menu-align-center .responsive-logo {
+	float: left;
+	width: auto;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -577,6 +581,9 @@ Footer
 	    font-weight: bold;
 	    font-size: 16px;
 	    line-height: 35px;
+	}
+	.header-search input[type="search"] {
+		width: auto;
 	}
 
 }
