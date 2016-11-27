@@ -1,3 +1,11 @@
+# Zerius
+
+Child theme for Zerif lite
+
+Zerius WordPress Theme, Copyright 2016 Themeisle Zerius is distributed under the terms of the GNU GPL
+
+# License #
+
 jquery.nicescroll
 Version 3.6.0
 Copyright 2014-11-21 InuYaksa*2014
