@@ -62,7 +62,7 @@ function zerius_customize_register( $wp_customize ) {
 			$wp_customize,
 			'ti-notify',
 			array(
-				'text'     => sprintf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','zerius' ), sprintf( '<a href="https://wp-themes.com/zerif-lite/" target="_blank">%s</a>', 'Zerif Lite' ), sprintf( '<a href="https://wp-themes.com/hestia/" target="_blank">%s</a>', 'Hestia' ) ),
+				'text'     => sprintf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','zerius' ), sprintf( '<a href="https://wp-themes.com/zerius/" target="_blank">%s</a>', 'Zerif Lite' ), sprintf( '<a href="https://wp-themes.com/hestia/" target="_blank">%s</a>', 'Hestia' ) ),
 				'priority' => 0,
 			)
 		)
@@ -88,9 +88,39 @@ function zerius_admin_notice() {
 
 	if ( is_admin() && ( 'themes.php' == $pagenow ) && isset( $_GET['activated'] ) ) {
 		echo '<div class="updated notice is-dismissible"><p>';
-		printf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','zerius' ), sprintf( '<a href="https://wp-themes.com/zerif-lite/" target="_blank">%s</a>', 'Zerif Lite' ), sprintf( '<a href="https://wp-themes.com/hestia/" target="_blank">%s</a>', 'Hestia' ) );
+		printf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','zerius' ), sprintf( '<a href="https://wp-themes.com/zerius/" target="_blank">%s</a>', 'Zerif Lite' ), sprintf( '<a href="https://wp-themes.com/hestia/" target="_blank">%s</a>', 'Hestia' ) );
 		echo '</p></div>';
 	}
 }
 
 add_action( 'admin_notices', 'zerius_admin_notice', 99 );
+
+/**
+ * Add search area in  header
+ */
+function zerius_add_search_content_in_header() {
+	?>
+	<div id="wrapper">
+		<div class="header-search">
+			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<label>
+					<span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'zerius' ); ?></span>
+					<input type="text" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'zerius' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="<?php _ex( 'Search for:', 'label', 'zerius' ); ?>">
+				</label>
+				<input type="submit" class="header-search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'zerius' ); ?>">
+			</form>
+		</div>
+	</div>
+<?php
+}
+
+add_action( 'zerif_after_header_container', 'zerius_add_search_content_in_header' );
+
+/**
+ * Add search icon in header
+ */
+function zerius_add_search_icon_in_header() {
+	echo '<a id="menu-toggle-search"><div class="navbar-right-search"></div></a>';
+}
+
+add_action( 'zerif_before_navbar','zerius_add_search_icon_in_header' );
