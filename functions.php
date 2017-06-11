@@ -68,7 +68,9 @@ function zerius_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( 'zerius-notify') ;
+	$wp_customize->add_setting( 'zerius-notify', array(
+	        'sanitize_callback' => 'esc_html',
+    ) );
 
 	$wp_customize->add_control( 'zerius-notify', array(
 		'label'    => __( 'Notification', 'zerius' ),
